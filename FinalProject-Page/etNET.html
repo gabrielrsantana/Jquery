@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="JS/jquery-3.6.0.min.js"></script>
+	<style>
+		*{
+			margin:0;
+		}
+
+		body{
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			line-height: 1.5;
+			background-color: #A6B727;
+		}
+		footer{
+			text-align: center;
+			color: rgb(255, 255, 255);
+		}
+		header{
+			position: sticky;
+			top: 0;
+			background-color: #A6B727;
+		}
+		main{
+			background-color: white;
+			color: #244400;
+			width: 95%;
+			margin-left: 40px;
+			border-radius: 5px;
+			padding: 10px;
+			text-align: justify;
+			margin-top: 40px;
+		}
+
+		nav{
+			color: rgb(255, 255, 255);
+			height: 120px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			width: 95%;
+		}
+
+		#logotipo{
+			height: 100%;
+			width: 15%;
+		}
+
+		#menu_horizontal{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			font-size: 30px;
+			list-style: none;
+			width: 90%;
+		}
+
+		#menu_vertical{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 12px;
+			list-style: none;
+			width: 90%;
+		}
+
+		a:visited{
+			color: white;
+		}
+
+		a{
+			color: white;
+			text-decoration: none;
+		}
+		.img_perfil{
+			width: 180px;
+			height: 220px;
+			border-radius: 60px;
+		}
+		.flex_pai{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin-top: 40px;
+		}
+		h2{
+			font-size: 20px;
+			text-align: center;
+		}
+		.clientes{
+			width: 150px;
+			height: 180px;
+			margin-left: 20px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#menu_vertical").hide();})	
+		window.addEventListener("resize", function () {
+		var tamanho = $(window).width();
+			if (tamanho >=1024){
+				$("#menu_horizontal").show();
+				$("#menu_vertical").hide();
+			}else{
+				$("#menu_vertical").show();
+				$("#menu_horizontal").hide();
+			} 
+		});
+	</script>
+	<title>etNET</title>
+</head>
+<body>
+	<nav>
+		<img src="Imagens/logotipo.png" alt="logo jurassic park" id="logotipo">
+		<ul id="menu_vertical">
+			<li> <a href="#"> Início </a> </li>
+			<li> <a href="#"> Serviços </a> </li>
+			<li> <a href="#"> Contato </a> </li>
+		</ul>
+		<ul id="menu_horizontal">
+			<li> <a href="#"> Início </a> </li>
+			<li> <a href="#"> Serviços </a> </li>
+			<li> <a href="#"> Contato </a> </li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<section>
+		<h1>A empresa</h1>
+		<p>
+			A etNET oferece soluções em tecnologia e tem como missão atender a todos os clientes de forma diferente e criativa, buscando agradar a todos. A maior meta é desenvolver e apresentar inovações que façam a diferença para o crescimento de outras organizações.
+		</p>
+		<p>
+			A empresa nasceu em 2021, na cidade de Varginha/MG, onde durante um bootcamp de TI, cinco amigos se conheceram e resolveram, juntos, criar uma organização diferente do que sempre encontramos, oferecendo um atendimento e acompanhamento do início ao fim. 
+		</p>
+		<br>
+		<h1>Conheça a equipe:</h1>
+	</section>
+	<section class="flex_pai">
+		<section>
+			<img src="Imagens/yasmine.jpg" alt="foto Yasmine" class="img_perfil">
+			<h2> Yasmine Pallin</h2>
+		</section>
+		<section>
+			<img src="Imagens/Lina.jpg" alt="foto Lina" class="img_perfil">
+			<h2> Lina A. Caetano</h2>
+		</section>
+		<section>
+			<img src="Imagens/Gabriel.jpg" alt="foto Gabriel" class="img_perfil">
+			<h2> Gabriel R. Santana </h2>
+		</section>
+		<section>
+			<img src="Imagens/Juan.jpg" alt="foto Juan" class="img_perfil">
+			<h2> Juan Pablo </h2>
+		</section>
+		<section>
+			<img src="Imagens/Jade.jpg" alt="foto Yasmine" class="img_perfil">
+			<h2> Jade Oliveira </h2>
+		</section>
+	</section>
+	<br>
+	<br>
+	<section>
+		<h1> Principais clientes:</h1>
+		<img src="https://conheca.campinas.sp.gov.br/images/front_end/logo_prefeitura.png" alt="" class="clientes"> 
+		<img src="Imagens/Brasão-de-Varginha.png" alt="" class="clientes">
+	</section>
+	
+</main>
+<footer>
+	<p>
+		etNet &copy; 2021
+	</p>
+</footer>
+</body>
+</html>

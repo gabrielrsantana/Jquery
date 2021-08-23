@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/home.css">
+	<link rel="stylesheet" href="CSS/styleTratamento.css">
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <title>Tratamentos</title>
+    <!-- Libras -->
+    <script src="JS/scriptTratamento.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <input type="text" placeholder="Busca">
+            <button>Buscar</button>
+        </form>
+
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+
+    </header>
+
+
+	<main class="container">
+		<!-- Banner -->
+		<img id="banner" src="Imagens/banner.jpg" alt="O que é covid?" />
+		<!-- Libras -->
+		<div vw class="enabled">
+		  <div vw-access-button class="active"></div>
+		  <div vw-plugin-wrapper>
+			<div class="vw-plugin-top-wrapper"></div>
+		  </div>
+		</div>
+  
+		<!-- VERDADES E MENTIRAS -->
+		<div id="fatoUm">
+		  <a
+			href="https://www.prefeitura.sp.gov.br/cidade/secretarias/saude/vigilancia_em_saude/doencas_e_agravos/coronavirus/index.php?p=295356"
+			target="_blank"
+		  >
+			<img
+			  id="imagemDuvidas" src="Imagens/remedio_ideia-removebg-preview.png" alt="duvida"
+			/>
+		  </a>
+  
+		  <h2>Não caia em fake news</h2>
+		  <h3>Fato ou Fake?</h3>
+		  <p>
+			Vacinas contra COVID-19 são capazes de transformar o código genético das pessoas?
+		  </p>
+		  <br />
+		  <p>
+			Chá de erva-doce previne contra a Covid-19 porque tem a mesma
+			substância que o remédio Tamiflu, para a gripe
+		  </p>
+		</div>
+		<div id="fatoDois">
+		  <a
+			href="https://www.medicina.ufmg.br/coronavirus/verdades-e-mentiras/"
+			target="_blank"
+		  >
+			<img
+			  id="imagemDuvidas" src="Imagens/remedio_ideia-removebg-preview.png" alt="duvida"
+			/>
+		  </a>
+		  <h2>Duvidas sobre medicamentos e tratamentos</h2>
+		  <h3>Saiba aqui: Verde a informação é verdadeira!</h3>
+		  <p>Não devo tomar ibuprofeno se apresentar sintomas?</p>
+		  <br />
+		  <p>
+			Há testes clínicos para uso do sangue de pacientes que já se
+			recuperaram do coronavírus em doentes graves da doença?
+		  </p>
+		</div>
+		<div id="fatoTres">
+		  <a
+			href="https://butantan.gov.br/covid/butantan-tira-duvida/tira-duvida-fato-fake"
+			target="_blank"
+		  >
+			<img
+			  id="imagemDuvidas" src="Imagens/remedio_ideia-removebg-preview.png"
+			  alt="duvida"
+		  /></a>
+		  <h2>Esclarecimento de boatos</h2>
+		  <h3>Saiba aqui: Vermelho a informação é falsa!</h3>
+		  <p>Gargarejos e o consumo de muita água imunizam contra o covid-19?</p>
+		  <br />
+		  <p>A vacina da gripe protege contra o covid-19?</p>
+		</div>
+  
+		<!-- TRATAMENTOS -->
+		<div id="conteudoMain1">
+		  <h2>
+			Todos os pacientes com suspeita de infecção pelo SARS-CoV-2 devem
+			buscar atendimento!
+		  </h2>
+		  <br />
+		  <p>
+			Atualmente, mais de 150 medicamentos estão em estudo, entre eles
+			antivirais, anti-inflamatórios, anticorpos e combinações de diferentes
+			medicamentos. Entretanto, até o momento, não existe um tratamento
+			específico para a infecção pelo SARS-CoV-2.
+		  </p>
+		  <br />
+		  <p>
+			O tratamento para casos leves de covid-19 recomendado é muito parecido
+			com o feito em outras infecções respiratórias causadas por vírus, como
+			a gripe. O médico pode prescrever remédios para alívio dos sintomas,
+			como analgésicos para as dores e antitérmicos para controlar a febre.
+			É importante notarmos que esses medicamentos atuam nos sintomas, e não
+			na causa da doença! Necessario repouso e mais ingestão de líquidos
+			para evitar desidratação. O médico pode solicitar exames de sangue ou
+			de imagem, como o raio-x, para avaliar a condição clínica do paciente.
+		  </p>
+		  <br />
+		  <p>
+			E lembre-se: Quem apresentar os sintomas do vírus pode procurar uma
+			das 468 Unidades Básicas de Saúde (UBS) da capital, deixando a rede de
+			emergência (como hospitais e prontos-socorros) apenas para os casos
+			mais graves de saúde ou para as pessoas pertencentes aos grupos de
+			risco, que são as pessoas com idade a partir de 60 anos e os
+			portadores de doenças crônicas graves e imunodeprimidos, como
+			pacientes que passam por quimioterapia.
+		  </p>
+		  <br />
+		  <a
+			href=" https://coronavirus.saude.mg.gov.br/blog/157-tratamento-casos-leves-covid19"
+			target="_blank"
+			>Fonte: Secretaria de Estado de saúde de Minas Gerais
+		  </a>
+		</div>
+  
+		<div id="conteudoMain2">
+		  <h2>Estou doente: o que fazer?</h2>
+		  <br />
+		  <h3>Orientações do Ministério da Saúde:</h3>
+		  <br />
+		  <ul>
+			<li>Use máscara o tempo todo.</li>
+			<br />
+			<li>
+			  Se for preciso cozinhar, use máscara de proteção, cobrindo boca e
+			  nariz todo o tempo.
+			</li>
+			<br />
+			<li>
+			  Depois de usar o banheiro, nunca deixe de lavar as mãos com água e
+			  sabão e sempre limpe vaso mantendo a tampa fechada, pia e demais
+			  superfícies com álcool, água sanitária ou outro produto recomendado
+			  pela Anvisa para desinfecção do ambiente.
+			</li>
+			<br />
+			<li>
+			  Separar toalhas de banho, garfos, facas, colheres, copos e outros
+			  objetos apenas para seu uso.
+			</li>
+			<br />
+			<li>O lixo produzido precisa ser separado e descartado.</li>
+			<br />
+			<li>
+			  Evite compartilhar sofás e cadeiras e realize limpeza e desinfecção
+			  frequente com água sanitária ou álcool 70% ou outro produto
+			  recomendado pela Anvisa.
+			</li>
+			<br />
+			<li>
+			  Mantenha a janela aberta para circulação de ar do ambiente usado
+			  para isolamento e a porta fechada, limpe a maçaneta frequentemente
+			  com álcool 70%, água sanitária, ou outro produto recomendado pela
+			  Anvisa.
+			</li>
+			<br />
+			<li>
+			  Caso o paciente não more sozinho, recomenda-se que os demais
+			  moradores da residência durmam em outro cômodo, seguindo também as
+			  seguintes recomendações:
+			</li>
+			<br />
+			<li>
+			  Mantenha a distância mínima de 1 metro entre a pessoa infectada e os
+			  demais moradores.
+			</li>
+			<br />
+			<li>
+			  Limpe os móveis da casa frequentemente com água sanitária, álcool
+			  70% ou outro produto recomendado pela Anvisa.
+			</li>
+			<br />
+			<li>
+			  Se uma pessoa da casa tiver diagnóstico positivo, todos os moradores
+			  devem ficar em distanciamento conforme orientação médica.
+			</li>
+		  </ul>
+		  <br />
+		  <a
+			href="https://www.gov.br/saude/pt-br/coronavirus/estou-doente-o-que-fazer"
+			target="_blank"
+			>Fonte: Ministério da Saúde
+		  </a>
+		</div>
+  
+		<div class="botoesUm">
+		  <button id="btn2">Saber mais sobre as recomendações</button>
+		  <button id="btn1">Ocultar</button>
+		  <img id="imagemRecomendacoes" src="Imagens/recomendacoes.png"	alt="Recomendações, tratamento Covid-19"/>
+		</div>
+  
+		<div class="botoesDois">
+		  <button id="btn5">Saber mais sobre as recomendações</button>
+		  <button id="btn4">Ocultar</button>
+		  <img id="imagemOqueFazer" src="Imagens/oquefazer.png"	alt="O que fazer: cuidados e isolamento!" />
+		</div>
+  
+		<div id="conteudoMain3">
+		  <h2>Estudos sobre remédios contra Covid-19</h2>
+		  <br />
+		  <h3>Antivirais Molnupiravir e Favipiravir</h3>
+		  <br />
+  
+		  <p>
+			Para o médico infectologista e coordenador da Sociedade Brasileira de
+			Infectologia (SBI), Marcelo Otsuka, os antivirais estão apresentando
+			resultados interessantes para casos leves e moderados da doença, mas
+			ressalta que ainda é preciso esperar as próximas etapas dos estudos
+			clínicos
+		  </p>
+		  <br />
+		  <p>
+			Molnupiravir: medicamento de uso oral. Segundo o Instituto
+			Farmanguinhos, os resultados completos da pesquisa não apresentaram
+			efeitos adversos, anormalidades e nem toxicidade limitante de dose no
+			nível mais alto dado aos pacientes. Evidências de benefício clínico
+			também foram observadas, particularmente, em indivíduos com início dos
+			sintomas (menor ou igual a cinco dias). É explicado ainda que conforme
+			andamento dos estudos, no segundo semestre de 2021, existe a previsão
+			de submissão às agências regulatórias para autorização de uso
+			emergencial do Molnupiravir.
+		  </p>
+		  <br />
+		  <p>
+			Favipiravir: Atualmente o favipiravir está sendo investigado em 64
+			estudos clínicos no mundo contra a infecção por SARS-CoV-2. Esta droga
+			já foi registrada para esta indicação terapêutica em vários países
+			incluindo os mais populosos como China, Rússia e Índia. Os ensaios
+			clínicos mostram redução do tempo para clearance viral, redução do
+			tempo de resolução dos sintomas, e melhora radiológica especialmente
+			se o tratamento for iniciado precocemente em até 72h do início dos
+			sintomas
+		  </p>
+		  <br />
+		  <a
+			href="https://www.cnnbrasil.com.br/saude/fiocruz-envia-ao-ministerio-da-saude-atualizacoes-sobre-remedios-contra-covid-19/"
+			target="_blank"
+			>Fonte: CNN
+		  </a>
+		  <br /><br />
+  
+		  <p id="cliqueSaibaMais">Clique e saiba mais.</p>
+		</div>
+  
+		<div id="conteudoMain4">
+		  <h2>
+			Brasil pode ter até 4 medicamentos novos para tratamento de Covid-19
+			até setembro de 2021
+		  </h2>
+		  <br />
+		  <h3>Sotrovimabe</h3>
+		  <br />
+		  <p>
+			O Sotrovimabe é um anticorpo sintético que “imita” os anticorpos
+			produzidos pelo corpo para combater o coronavírus e que impede o vírus
+			de se replicar. O medicamento seria utilizado em casos moderados da
+			doença
+		  </p>
+		  <br />
+		  <p>
+			Os estudos para avaliar a eficácia do medicamento foram realizados em
+			vários países do mundo com 1062 participantes, dos quais 22 são
+			brasileiro
+		  </p>
+		  <br />
+		  <h3>Citrato de tofacitinibe (Xeljanz)</h3>
+		  <br />
+		  <p>
+			O citrato de tofacitinibe é um anti-inflamatório, atualmente utilizado
+			para tratamento de artrite reumatoide, artrite psoriática e colite
+			ulcerosa. A proposta é que o medicamento seja utilizado para reduzir o
+			tempo de internação de pacientes com quadro moderado com risco de
+			progredir para caso grave.
+		  </p>
+		  <br />
+		  <p>
+			“O processo da Covid-19 é um processo inflamatório assim como a
+			artrite. A inflamação é uma resposta exagerada do corpo, que começa
+			atacar as próprias celulas. Os anti-inflamatórios reduzem essa
+			resposta imune”, explicou Mendes.
+		  </p>
+		  <br />
+		  <h3>Baricitinibe</h3>
+		  <br />
+		  <p>
+			Assim com o medicamento anterior, o Baricitinibe também é uma droga
+			anti-inflamatória utilizada para tratamento de artrite. De acordo com
+			dados de um estudo realizado com pacientes graves de Covid-19, o
+			Baricitinibe reduziu em 38% a mortalidade entre os infectados.
+		  </p>
+		  <br />
+		  <p>
+			A pesquisa foi conduzida em 12 centros clínicos de todo o país e
+			testou o medicamento em 1.525 voluntários.
+		  </p>
+		  <br />
+		  <h3>Dexametasona</h3>
+		  <br />
+		  <p>
+			A Dexametasona é um corticoide que já é amplamente utilizado no país.
+			No contexto da Covid-19, o medicamento em sido adotado em alguns
+			hospitais para ajudar a reduzir a inflamação causada no pulmão pelo
+			coronavírus. A proposta é que seja utilizado em casos graves da
+			doença.
+		  </p>
+		  <br />
+		  <p>
+			De acordo com um estudo publicado em junho, o medicamento pode reduzir
+			em um terço as mortes de pacientes que estão sob ventilação mecânica.
+			No caso de pacientes que estão utilizando apenas oxigênio, a redução
+			observada foi de 20%.
+		  </p>
+		  <br />
+		  <a
+			href="https://oglobo.globo.com/saude/brasil-pode-ter-ate-quatro-medicamentos-novos-para-tratamento-de-covid-19-ate-setembro-1-25163115"
+			target="_blank"
+			>Fonte: O Globo</a
+		  >
+		</div>
+  
+		<div id="conteudoMain5">
+		  <a
+			href="https://www.gov.br/saude/pt-br/coronavirus/publicacoes-tecnicas/recomendacoes/tto_farmacologico_pacienteadultohospitalizado_covid19_18052021.pdf"
+			target="_blank"
+			><img id="imagemHospital" src="Imagens/hospital.png"
+			  alt="Tratamento em casos de internação"
+		  /></a>
+		  <p>- Clique e saiba mais</p>
+		</div>
+  
+		<div id="conteudoMain6">
+		  <iframe
+			id="videoTratamento"
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/uQbG7f54xoM"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		  ></iframe>
+		</div>
+	  </main>
+
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+
+    <script src="JS/Home.js"></script>
+</body>
+
+</html>

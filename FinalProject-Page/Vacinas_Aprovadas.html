@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="JS/jquery-3.6.0.min.js"></script>
+	<script src="JS/jquery-ui-1.12.1.js"></script>
+	<script src="JS/script_vacinas.js"></script>
+    <!-- <link rel="stylesheet" href="CSS/home.css"> -->
+	<link rel="stylesheet" href="CSS/jquery-ui-1.12.1.css">
+	<link rel="stylesheet" href="CSS/style_vacinas.css">
+
+    <title>Vacinas</title>
+    <!-- Libras -->
+     <script src="script_inicio.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script> 
+</head>
+
+<body>
+
+    <header>
+
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <input type="text" placeholder="Busca">
+            <button>Buscar</button>
+        </form>
+
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+
+    </header>
+
+
+    <main>
+        <section class="flex_pai_vacinas">
+				<div id="dialog" title="Basic dialog">
+					<p>Para saber mais sobre o andamento da vacinação em Varginha, siga para a página de <a href="Boletim.html"> Boletim </a> </p>
+			  	</div>
+				<h1 id="inicio"> Vacinas Covid-19 </h1>
+				<h3>Atualmente existem quatro formas para uma vacina contra Covid-19 ser disponibilizada no país: registro, uso emergencial, importação excepcional ou pelo consórcio Covax Facility. No momento há quatro vacinas aprovadas sendo utilizadas no país, clique em cada uma para saber mais.</h3>
+
+			<section class="flex_vacinas_aprovadas">
+				<section class="box_vacinas">
+					<h1 id="vacina_um">Comirnaty (Pfizer/Wyeth)</h1>
+					<div id="box_um">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: RNA mensageiro sintético.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada com um intervalo maior ou igual a 21 dias após a primeira. Faixa etária autorizada: a partir de 12 anos.  
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							Os dados do estudo de Fase 3 demonstraram que, embora haja proteção parcial após cerca de 12 dias da primeira dose, são necessárias duas doses da vacina para que o potencial máximo de proteção contra a doença seja atingido. Os resultados de eficácia global da vacina, de 95%, foram aferidos a partir de 7 dias da segunda dose do esquema vacinal.
+						</p>
+					</div>					
+				</section>
+				<section class="box_vacinas">
+					<h1 id="vacina_dois">Coronavac (Butantan)</h1>
+					<div id="box_dois">						
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: antígeno do vírus inativado. Uso emergencial aprovado em 17/01/2021.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada entre 2 e 4 semanas após a primeira. Faixa etária autorizada: a partir de 18 anos.   
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							A eficácia da CoronaVac para casos sintomáticos atingiu 50,7% com 14 dias de intervalo entre as duas doses, mais do que os 50,38% divulgados em janeiro com base nos dados iniciais do estudo clínico de fase 3. Além disso, a eficácia global, que aponta a capacidade que o imunizante tem de proteger em casos leves, moderados ou graves, pode chegar a 62,3% se o espaço entre as duas doses for de 21 dias ou mais.
+						</p>
+					</div>	
+				</section>
+				<section class="box_vacinas">
+					<h1 id="vacina_tres">Janssen Vaccine (Janssen-Cilag)</h1>
+					<div id="box_tres">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: vetores de adenovírus sorotipo 26 (Ad26). Prazo de validade: Quatro meses e meio quando armazenada na temperatura entre 2°C e 8°C. Após aberto, o frasco pode ser utilizado em até seis horas.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: dose única. Faixa etária autorizada: a partir de 18 anos.  
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							Eficácia de 66% na prevenção de doenças moderadas e graves, em um ensaio global de Fase 3 e mais de 85% de eficácia contra doenças graves.
+						</p>
+					</div>	
+				</section>
+				<section class="box_vacinas">
+					<h1 id="vacina_quatro">Oxford/Covishield (Fiocruz e Astrazeneca)</h1>
+					<div id="box_quatro">
+						<h3>Sobre</h3>
+							<p>
+								Tecnologia: vetor adenovírus recombinante. Faixa etária autorizada: a partir de 18 anos. Observações importantes: Comunicado GGMON 005/2021, que trata da suspensão imediata do uso da vacina contra a Covid-19 da AstraZeneca/Fiocruz em gestantes. Uso emergencial aprovado em 12/03/2021.
+							</p>
+						<h3>Métodos</h3>
+							<p>
+								Quantidade de doses para imunização: duas doses. A segunda dose deve ser aplicada entre 4 e 12 semanas após a primeira. 
+							</p>
+						<h3>Eficácia</h3>
+						<p>
+							A vacina demonstrou eficácia de 73% 22 dias após a primeira dose (em um período de pelo menos três meses) e com forte indicativo de aumento da resposta imune quando a segunda dose é fornecida em intervalo de três meses, o que propicia um aumento de cerca de 7,5 vezes nos níveis da resposta      humoral (produção de anticorpos).
+						</p>
+					</div>	
+				</section>
+
+			</section>
+			<h1>Teste seus conhecimentos</h1>
+			<h3>Para descobrir se você está por dentro das vacinas aprovadas no Brasil, arraste as opções para o centro do quadrado.</h3>
+			<h3>As opções verdes são as vacinas válidas, as que ficarem vermelhas são falsas.</h3>
+			<section class="flex_joguinho">				
+				<div id="draggable_um" class="ui-widget-content verdadeiro">
+					<p>Comirnaty (Pfizer/Wyeth)</p>
+				</div>
+
+				<div id="draggable_seis" class="ui-widget-content falso">
+					<p>Buscopanvac (Lab. Trust)</p>
+				</div>
+
+				<div id="draggable_tres" class="ui-widget-content verdadeiro">
+					<p>Janssen Vaccine (Janssen-Cilag)</p>
+				</div>
+
+				<div id="draggable_cinco" class="ui-widget-content falso">
+					<p>Cloroquinavac (Exercito Brasileiro)</p>
+				</div>
+
+				<div id="draggable_dois" class="ui-widget-content verdadeiro">
+					<p>Coronavac (Butantan)	</p>
+				</div>
+
+				<div id="draggable_sete" class="ui-widget-content falso">
+					<p>Vacina de Polaramine (Lab. Fakenew)</p>
+				</div>
+
+				<div id="draggable_quatro" class="ui-widget-content verdadeiro">
+					<p>Oxford/Covishield (Fiocruz e Astrazeneca)</p>
+				</div>
+
+				<div id="draggable_oito" class="ui-widget-content falso">
+					<p>Vacflex (Lab. NotTrue)</p>
+				</div>	
+
+				<div id="droppable" class="ui-widget-header">
+				<p>Insira aqui</p>
+				</div>
+			</section>
+
+
+			</section>
+		</section>
+		<!-- Libras -->
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
+    </main>
+
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#inicio"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+
+    <!-- <script src="JS/Home.js"></script> -->
+</body>
+
+</html>

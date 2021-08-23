@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/galeriaStyle.css"> <!--  stylo usado na pagina de galeria de vacinas   #############  Gabriel Rocha e juan pablo-->
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <title>Galeria</title>
+    <!-- Libras -->
+    <script src="script_inicio.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="xxxx.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <input type="text" placeholder="Busca">
+            <button>Buscar</button>
+        </form>
+
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+
+    </header>
+    <!-- Inicio MAIN DA GALERIA de IMAGENS -->
+    <main id="main-galeria">
+        <img id="banner" src="Imagens/galeria-vacina.jpg" alt="O que é covid?">
+        <h1>Galeria de fotos da Campanha</h1>
+       <!-- Libras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+ <!-- INICIO SLIDESHOW -->
+       
+<section class="slideshow-container">
+    <section class="mySlides fade">
+      <section class="numbertext">1 / 6</section>
+      <img src="./Imagens/galeria1.jpg" style="width:100%">
+      <!-- <div class="text">vacinação em massa</div> -->
+    </section>
+    
+    <section class="mySlides fade">
+      <section class="numbertext">2 / 6</section>
+      <img src="./Imagens/galeria2.png" style="width:100%">
+    </section>
+    
+    <section class="mySlides fade">
+      <section class="numbertext">3 / 6</section>
+      <img src="./Imagens/galeria3.jpg" style="width:100%">
+    </section>
+
+    <section class="mySlides fade">
+        <section class="numbertext">4 / 6</section>
+        <img src="./Imagens/galeria4.jpg" style="width:100%">
+    </section>
+
+      <section class="mySlides fade">
+        <section class="numbertext">5 / 6</section>
+        <img src="./Imagens/galeria5.jpg" style="width:100%">
+    </section>
+
+      <section class="mySlides fade">
+        <section class="numbertext">6 / 6</section>
+        <img src="./Imagens/galeria6.jpg" style="width:100%">
+    </section>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+</section>
+    <br>
+    
+    <!-- circulos que ao clicar aparecem as fotos -->
+    <section style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </section>
+
+</main>
+<!-- FIM SLIDESHOW -->
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+
+    <script src="JS/Home.js"></script>
+
+<!-- CODIGO DA PAGINA CARROULSEL GALERIA-->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1; }    
+  if (n < 1) { 
+      slideIndex = slides.length;
+   }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+
+  
+}
+</script>
+<!-- FIM CODIGO DA PAGINA CARROULSEL GALERIA-->
+
+</body>
+
+</html>

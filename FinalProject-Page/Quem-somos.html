@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Quem-somos.css">
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <title>Quem somos</title>
+    <!-- Libras -->
+    <script src="script_inicio.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./JS/Quem-somos.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <input type="text" placeholder="Busca">
+            <button>Buscar</button>
+        </form>
+
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+
+    </header>
+
+
+    <main>  
+        <img id="banner" src="Imagens/banner.jpg" alt="O que é covid?">     
+            <section id="titulo"><h1 >Quem somos </h1></section>
+        <section id="principal">
+            <article id="texto">
+				<p>
+					A etNET oferece soluções em tecnologia e tem como missão atender a todos os clientes de forma diferente e criativa, buscando agradar a todos. A maior meta é desenvolver e apresentar inovações que façam a diferença para o crescimento de outras organizações. 
+				</p>
+				<p>
+					Para conhecer o trabalho da etNet, clique <a href="etNET.html" target="_blank">aqui</a>.
+				</p>
+				<p>
+					O cliente final deste projeto é a prefeitura da cidade de Varginha, localizada no sul de Minas Gerais, considerada a 5º cidade mais segura do Brasil. foi solicitado um site onde os moradores pudessem aprender mais sobre o Covid, se cadastrar para a vacinação, acompanhar números etc.
+				</p>
+            </article>
+            <section >
+                <img id="imagem1" src="Imagens/prefeitura_varginha.jpg">
+                <img id="imagem2" src="Imagens/navi.jpg">
+            </section>
+        </section>
+
+        <!-- Libras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+
+    
+</body>
+
+</html>

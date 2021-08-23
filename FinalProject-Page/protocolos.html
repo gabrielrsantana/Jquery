@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="./CSS/protocoloStyle.css"> <!-- ####################style da pagina protocolos by gabriel-->
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/protocolo.js"></script>   <!-- ################################ chama protocolo.js pro novo dark mode    Gabriel ROcha -->
+    <!-- <script src="JS/Home.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  <!--############ script da pagina protocolos by gabriel-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!--####### script da pagina protocolos by gabriel-->
+    <title>Protocolos de Prevenção</title>
+    <!-- Libras -->
+    <script src="script_inicio.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+    <header id="header-protocolo">
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <input type="text" placeholder="Busca">
+            <button>Buscar</button>
+        </form>
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+    </header>
+    <main class="main-class">
+            <!-- container com foto do virus -->
+            <div id="container-foto">
+            <img id="imagem-virus" src="./imagens/covid19-virus.png" > <h1> Protocolos de Combate à Covid-19 </h1></img>
+            </div>
+            <!-- fim container foto virus covid -->
+            <!-- inicio acordion -->
+            <section id="accordion" class="acordionPosicao">
+            <h3 >Use Máscara Obrigatoriamente </h3>
+            <section>
+                <p>As pessoas que usarem máscaras devem seguir as boas práticas de uso, remoção e descarte, assim como higienizar adequadamente as mãos antes e após a remoção. Devem também lembrar que o uso de máscaras deve ser sempre combinado com as outras medidas de proteção.</p>
+                 
+           </section>
+            <h3>Distanciamento Social</h3>
+            <section>
+                <p>O distanciamento deve ser respeitado, considerando-se 1 metro para pessoas com o uso de máscaras ou 2 metros em situações quando não for possível o uso delas (como jantares ou outros locais em que possa existir alimentação ou consumo de líquidos). No contato com outras pessoas, a orientação é que sejam evitados comportamentos como apertos de mão, abraços e beijos no rosto, assim como o compartilhamento de objetos pessoais (copos, chimarrão, caneta, telefone e fones de ouvido por exemplo).
+                </p>
+            </section>
+            <h3>Lavar as mãos e fique distante</h3>
+            <section>
+                <p> Lave as mãos com água e sabão ou higienizador à base de álcool 70% para matar vírus que podem estar nas suas mãos.</p>
+                <br>
+                <p>Mantenha pelo menos 1 metro de distância entre você e qualquer pessoa que esteja tossindo ou espirrando. Quando alguém tosse ou espirra, pulveriza pequenas gotas líquidas do nariz ou da boca, que podem conter vírus. Se você estiver muito próximo, poderá inspirar as gotículas – inclusive do vírus da COVID-19 se a pessoa que tossir tiver a doença.</p>
+            </section>
+            <h3>Evite tocar nos olhos.</h3>
+            <section>
+                <p>Evite tocar nos olhos, nariz e boca. As mãos tocam muitas superfícies e podem ser infectadas por vírus. Uma vez contaminadas, as mãos podem transferir o vírus para os olhos, nariz ou boca. A partir daí, o vírus pode entrar no corpo da pessoa e deixá-la doente.               
+                </p>
+           </section>
+            <h3>Higiene Respiratória</h3>
+            <section>
+                <p>Certifique-se de que você e as pessoas ao seu redor seguem uma boa higiene respiratória. Isso significa cobrir a boca e o nariz com a parte interna do cotovelo ou lenço quando tossir ou espirrar (em seguida, descarte o lenço usado imediatamente). Gotículas espalham vírus. Ao seguir uma boa higiene respiratória, você protege as pessoas ao seu redor contra vírus responsáveis por resfriado, gripe e COVID-19.               
+                </p>
+            </section>
+            <h3>Em caso de passar mal. </h3>
+            <section>
+                <p>Fique em casa se não se sentir bem. Se você tiver febre, tosse e dificuldade em respirar, procure atendimento médico. Siga as instruções da sua autoridade sanitária nacional ou local, porque elas sempre terão as informações mais atualizadas sobre a situação em sua área.
+                </p>
+           </section>
+           <h3>Quem quer viajar e sente-se mal. </h3>
+           <section>
+               <p>Pessoas doentes devem adiar ou evitar viajar para as áreas afetadas por coronavírus. Áreas afetadas são países, áreas, províncias ou cidades onde há transmissão contínua – não áreas com apenas casos importados.</p>
+                <p>Os viajantes que retornam das áreas afetadas devem monitorar seus sintomas por 14 dias e seguir os protocolos nacionais dos países receptores; e se ocorrerem sintomas, devem entrar em contato com um médico e informar sobre o histórico de viagem e os sintomas.
+               </p>
+          </section>
+            </section>
+            <!-- fim Section principal Acordion--->
+            <!-- section dos videos -->
+            <section class="section-videos">
+                <article class="article-videos-descricao">
+                   <p>Como Higienizar as mãos.</p>
+                      <iframe width="300" height="260" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/tUw6lRQ5cs4?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+                </article>
+                <article class="article-videos-descricao">
+                    <p>Como usar a máscara.</p>
+                      <iframe width="300" height="260" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/3aT0YQTDYB4?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+                </article>    
+                <article class="article-videos-descricao">
+                    <p>Faça os 5 contra corona vírus</p>
+                     <iframe width="300" height="260" frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/tiZCuWDI5No?autoplay=0&amp;start=0&amp;rel=0"></iframe>
+                </article>
+            </section>
+            <!-- FIM Section dos Videos -->
+            <!-- Libras -->
+            <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
+                </div>
+            </div>
+            <!-- Fim codigo LIBRAS -->
+
+            </main>
+            <script>
+                // Usado Jquery-UI acordion 
+                $(document).ready(function(){
+                    $(function(){
+                    $("#accordion").accordion();
+                });
+                    //comeca com 0% de width,e na animacao coloca 100%
+                    //usamos call back funcion pra animar o h1
+                    $("#container-foto").animate({width:"100%"},2000,function(){
+                        $(".main-class h1").fadeIn(2000);
+                    });
+                 
+                }); //ready
+             
+                
+    
+            </script>
+    <!--  FOOTER -->
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+
+    
+</body>
+
+</html>
