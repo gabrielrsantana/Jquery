@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <title>Cadastro</title>
+    <!-- Libras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Barra de progresso -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <form id="form_busca" action="/pagina-processa-dados-do-form" method="post">
+            <input id="input_busca" type="text" placeholder="Busca">
+            <button id="bt_buscar">Buscar</button>
+        </form>
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+    </header>
+
+
+    <main>
+        <img id="banner" src="Imagens/banner_cadastro.png" alt="Vacinaçao">
+
+        <div id="conteiner_conteudo">
+
+            <div class="divs_conteudo">
+                <h1>Cadastre-se e entre na fila da vacina!</h1>
+                <img class="img_cadastro" src="Imagens/fila vacina1.jpg" alt="Cadastro">
+                <p>A vacina já chegou aqui em Varginha, mas ainda não temos para todos, então estamos organizando em
+                    fila.
+                    Pessoas mais velhas,
+                    profissionais da área de saúde, gestantes e pessoas com comorbidade tem preferência.
+                </p>
+                <img class="img_cadastro" src="Imagens/fila vacina2.jpg" alt="Cadastro">
+                <p>Faça seu cadastro para entrar na fila, te informaremos quando será a sua vez!</p>
+                <img class="img_cadastro" src="Imagens/fila vacina3.jpg" alt="Cadastro">
+            </div>
+
+            <div class="divs_conteudo">
+                <h1>Formulário</h1>
+                <form id="form_cadastro" action="/action_page.php">
+                    <P>
+                        <label for="nome">Nome completo: </label><br>
+                        <input class="input_form" type="text" name="nome" placeholder="Nome completo">
+                    </P>
+
+                    <P>
+                        <label for="cpf">CPF</label><br>
+                        <input class="input_form" type="number" name="cpf" placeholder="xxxxxxxxxxx">
+                    </P>
+
+                    <P>
+                        <label for="data de nascimento">Data de nascimento</label><br>
+                        <input class="input_form" type="date" name="data de nascimento">
+                    </P>
+
+                    <P><label for="sexo">Sexo</label><br>
+                        <select class="input_form" name="sexo" >
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </P>
+
+                    <P>
+                        <input class="gestante" type="checkbox" value="gestante">
+                        <label class="gestante" for="taste_1">Gestante</label> <br>
+                        <input type="checkbox" value="quilombola">
+                        <label for="taste_1">Quilombola</label>
+                    </P>
+
+                    <p><label for="raça">Raça</label><br>
+                        <select class="input_form" name="raca">
+                            <option value="">Selecione</option>
+                            <option value="branco">Branco</option>
+                            <option value="pardo">Pardo</option>
+                            <option value="preto">Preto</option>
+                            <option value="amarelo">Amarelo</option>
+                            <option value="indigina">Indígina</option>
+                            <option value="indeclarado">Não declarar</option>
+                        </select>
+                    </p>
+
+                    <P>
+                        <label for="peso">Peso</label>
+                        <input class="input_form" type="number" name="peso">
+                    </p>
+                    <p>
+                        <label for="altura">Altura</label>
+                        <input class="input_form" type="number" name="altura">
+                    </P>
+
+                    <p class="letra_destaque">
+                        Caso apresente alguma comorbidade, favor preencher abaixo. Lembrando que será necessário
+                        comprovção mediante laudo médico no dia da vacinação.
+                    </p>
+
+                    <P>
+                        <label for="comorbidade">Comorbidades</label><br>
+                        <select class="input_form" name="comorbidade">
+                            <option value="">Selecione</option>
+                            <option value="1">Diabetes</option>
+                            <option value="2">Doença Pulmonar Obstrutiva Crônica</option>
+                            <option value="3">Asma grave com uso de medicamento contínuo</option>
+                            <option value="4">Fibrose pulmonar</option>
+                            <option value="5">Hipertensão Arterial Resistente</option>
+                            <option value="6">Cardiopatias</option>
+                            <option value="7">Insuficiência cardíaca</option>
+                            <option value="8">Miocardiopatias e Pericardiopatias</option>
+                            <option value="9">Aneurismas</option>
+                            <option value="10">Arritmias cardíaca</option>
+                            <option value="11">Próteses valvares e dispositivos cardíacos</option>
+                            <option value="12">Valvopatias</option>
+                            <option value="13">Infarto Agudo do Miocárdio</option>
+                            <option value="14">Transplante de órgão ou medula</option>
+                            <option value="15">HIV</option>
+                            <option value="16">Doença reumatológica imunomediada sistêmica</option>
+                            <option value="17">Câncer nos últimos seis meses</option>
+                            <option value="18">Doença renal crônica</option>
+                            <option value="19">Hemoglobinopatias graves</option>
+                            <option value="20">Doença cerebrovascular</option>
+                            <option value="21">Doenças neurológicas crônicas</option>
+                            <option value="22">Obesidade mórbida</option>
+                            <option value="23">Fibrose cística</option>
+                            <option value="24">Síndrome de Down</option>
+                            <option value="25">Anemia falciforme</option>
+                            <option value="26">Outras</option>
+                            <option value="27">Não tenho comorbidades</option>
+                        </select>
+                    </P>
+
+                    <p id="outras_comorbidade">
+                        <label for="outra_comorbidade">Qual?</label><br>
+                        <input class="input_form" type="text" name="outra_comorbidade">
+                    </p>
+
+                    <p>
+                        <label for="cartao_sus">Cartão do SUS</label><br>
+                        <input class="input_form" type="number" name="cartao_sus" placeholder="xxxxxxxxxxxxxxx">
+                    </p>
+
+
+                    <p class="letra_destaque">Verifique no seu cartão de vacinação e indique as vacinas que já tomou</p>
+                    <p>
+                        <input type="checkbox" value="1">
+                        <label for="taste_1">Tríplice bacteriana: difteria, tétano e coqueluche</label><br>
+                        <input type="checkbox" value="2">
+                        <label for="taste_2">Hepatite B</label><br>
+                        <input type="checkbox" value="3">
+                        <label for="taste_1">Contra a pneumonia</label><br>
+                        <input type="checkbox" value="4">
+                        <label for="taste_2">Febre amarela</label><br>
+                        <input type="checkbox" value="5">
+                        <label for="taste_1">Gripe</label><br>
+                        <input type="checkbox" value="6">
+                        <label for="taste_2">Contra o HPV</label><br>
+                        <input type="checkbox" value="7">
+                        <label for="taste_1">Contra herpes-zóster (cobreiro)</label><br>
+                        <input type="checkbox" value="8">
+                        <label for="taste_2">Tríplice viral: sarampo, caxumba e rubéola</label><br>
+                        <input type="checkbox" value="9">
+                        <label for="taste_2">Dengue</label><br>
+                    </p>
+
+                    <p class="letra_destaque">
+                        Alguns profissionais terão prioridade na vacinação, selecione abaixo a opção em que melhor se
+                        enquadre. Lembrando que você precisará comprovar atuação no dia da vacinação.
+                    </p>
+
+                    <p>
+                        Grupo profissional <br>
+                        <select class="input_form" name="profissao">
+                            <option value="">Selecione</option>
+                            <option value="1">Trabalhadores da área de Saúde</option>
+                            <option value="2">Professores (do nível básico ao superior)</option>
+                            <option value="3">Profissionais de forças de segurança e salvamento</option>
+                            <option value="4">Funcionários do sistema prisional</option>
+                            <option value="5">Transportes dos transportes coletivos</option>
+                            <option value="6">Motoristas de carga (ex.caminhoneiro)</option>
+                            <option value="7">Não faço parte de nenhum grupo prioritário acima</option>
+                            <option value="8">Outra</option>
+                        </select>
+                    </p>
+
+                    <p id="bt_form">
+                        <input id="bt_enviar" type="button" value="Quero entrar na fila">
+                    </p>
+
+                    <div id="progressbar"></div>
+            </div>
+
+            <div class="divs_conteudo">Resultado: </div>
+        </div>
+
+        <!-- Libras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#banner"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+    <script src="JS/Cadastro.js"></script>
+</body>
+
+</html>

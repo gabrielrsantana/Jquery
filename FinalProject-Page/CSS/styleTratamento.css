@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Conteiner do cabeçalho */
+header {
+  width: 100%;
+  height: 18vh;
+  background-image: linear-gradient(#0e2f59, #416bbf);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 5px 10px #416bbf;
+}
+#logo {
+  height: 16vh;
+}
+/* Estilização do menu */
+nav {
+  height: 15%;
+  text-transform: uppercase;
+}
+.menu {
+  list-style: none;
+  float: left;
+}
+
+.menu li {
+  position: relative;
+  float: left;
+  border-right: 1px solid #f2f2f2;
+}
+.menu li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  font-size: 120%;
+  font-weight: bold;
+}
+.menu li a:hover {
+  background: #0e2f59;
+  text-shadow: 0px 0px 5px #f2f2f2;
+}
+.menu li ul {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: none;
+}
+.menu li:hover ul {
+  display: block;
+  background-image: linear-gradient(#0e2f59, #416bbf);
+}
+.menu li ul li {
+  display: block;
+  width: 100%;
+}
+/* Ajustes do formulário */
+form {
+  width: 14vw;
+}
+input {
+  width: 7vw;
+  font-size: 100%;
+  border-radius: 5%;
+}
+button {
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 100%;
+  color: #0e2f59;
+  border-radius: 5%;
+}
+#darkmode,
+#letra_aumenta,
+#letra_diminui {
+  height: 4vh;
+}
+/* Estilização do rodapé */
+footer {
+  width: 100%;
+  height: 12vh;
+  background-image: linear-gradient(#416bbf, #0e2f59);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: #f2f2f2;
+  font-size: 120%;
+  box-shadow: 0 -5px 10px #416bbf;
+}
+.img_footer {
+  height: 5vh;
+}
+
+/* Estilização do Main pág TRATAMENTO */
+
+#banner {
+  width: 100%;
+  height: 50vh;
+  box-shadow: 0 5px 10px #416bbf;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 410vh;
+  background-color: rgb(210, 210, 245);
+}
+
+#fatoUm,
+#fatoDois,
+#fatoTres {
+  width: 96%;
+  height: 5%;
+  margin: 0 2%;
+  border: 2px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.3rem, 2rem);
+  color: white;
+  text-align: center;
+  background-color: #7492b9;
+  border: 4px outset white;
+  overflow-y: auto;
+  border-radius: 2%;
+}
+
+#imagemDuvidas {
+  float: right;
+  width: 10%;
+  margin: 0;
+}
+
+.botoesUm,
+.botoesDois {
+  width: 46%;
+  height: 100vh;
+  margin: 0 2%;
+}
+
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5,
+#btn6 {
+  border-radius: 15%;
+  background-color: #0e2f59;
+  color: white;
+}
+
+#imagemRecomendacoes {
+  float: right;
+  width: 100%;
+  height: 100%;
+  border-radius: 2%;
+  border: 5px solid #f2f2f2;
+}
+
+#imagemOqueFazer {
+  float: right;
+  width: 100%;
+  height: 100%;
+  border-radius: 2%;
+  border: 5px solid #f2f2f2;
+}
+
+#conteudoMain1,
+#conteudoMain2,
+#conteudoMain3,
+#conteudoMain4,
+#conteudoMain5,
+#conteudoMain6 {
+  overflow-y: auto;
+  scrollbar-color: lightblue;
+  width: 46%;
+  height: 52vh;
+  border: 4px outset white;
+  border-radius: 2%;
+  margin: 0 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  color: white;
+  padding: 2% 4%;
+  text-align: justify;
+  background-color: #7492b9;
+}
+
+#conteudoMain5,
+#conteudoMain6 {
+  border-radius: 10%;
+  padding: 0%;
+}
+
+#videoTratamento {
+  width: 100%;
+  height: 96%;
+}
+
+#imagemHospital {
+  width: 100%;
+  height: 90%;
+}

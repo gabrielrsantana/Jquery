@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Conteiner do cabeçalho */
+header{
+    width: 100%;
+    height: 18vh;
+    background-image: linear-gradient(#0E2F59, #416BBF);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0 5px 10px #416BBF;
+}
+#logo{
+    height: 16vh;
+}
+/* Estilização do menu */
+nav{
+    height: 15%;
+    text-transform: uppercase;
+}
+.menu {
+    list-style: none;
+    float: left;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    border-right: 1px solid #F2F2F2;
+}
+.menu li a {
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    font-size: 120%;
+    font-weight: bold;
+}
+.menu li a:hover {
+    background: #0E2F59;
+    text-shadow: 0px 0px 5px #F2F2F2;
+}
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+}
+.menu li:hover ul{
+    display: block;
+    background-image: linear-gradient(#0E2F59, #416BBF);
+}
+.menu li ul li {
+    display: block;
+    width: 100%;
+}
+/* Ajustes do formulário */
+form{
+    width: 14vw;
+}
+input{
+    width: 7vw;
+    font-size: 100%;
+    border-radius: 5%;
+}
+button{
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 100%;
+    color: #0E2F59;
+    border-radius: 5%;
+}
+#darkmode, #letra_aumenta, #letra_diminui{
+    height: 4vh;
+}
+/* Estilização do rodapé */
+footer{
+    width: 100%;
+    height: 12vh;
+    background-image: linear-gradient( #416BBF,#0E2F59);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #F2F2F2;
+    font-size: 120%;
+    box-shadow: 0 -5px 10px #416BBF;
+}
+.img_footer{
+    height: 5vh;
+}
+
+/* ATENÇÃO ESTILIZAÇÃO DA MAIN, NÃO FAZ PARTE DAS DEMAIS PÁGINAS */
+main{
+    width: 100%;
+    background-color: #F2F2F2;
+}
+#banner{
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0 5px 10px #416BBF;
+}
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.img_main{
+    width: 35%;
+    box-shadow: 0 5px 10px #0E2F59;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/* =============== Stylos da pagina galeria by Gabriel Rocha e Juan Pablo============================ */
+
+#main-galeria  h1{
+text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+text-shadow: 0 0 20px darkgray;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 40%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .slideshow-container img {
+  box-shadow: 0 0 5px  #c6c9d0;
+  border-radius: 5px;
+}
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #746f6f;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color:#416bbf;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+

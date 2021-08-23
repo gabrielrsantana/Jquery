@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/style_dados.css">
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+	<script src="JS/script_dados.js" type="text/javascript"></script>
+    <title>Boletim</title>
+    <!-- Libras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="Home.html"><img id="logo" src="Imagens/Brasão-de-Varginha.png" alt="Logo"></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Quem-somos.html">Quem Somos</a> </li>
+                <li><a href="Boletim.html"> Boletim</a> </li>
+                <li><a href="Vacinas_Aprovadas.html"> Vacinas</a></li>
+                <li><a href="#">Campanha de Vacinação</a>
+                    <ul>
+                        <li> <a href="galeria.html">Galeria</a></li>
+                        <li><a href="protocolos.html">Protocolos</a></li>
+                        <li><a href="Tratamento.html">Tratamento</a></li>
+                        <li><a href="Cadastro.html">Entre na fila</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <form action="/pagina-processa-dados-do-form" method="post">
+            <input type="text" placeholder="Busca">
+            <button>Buscar</button>
+        </form>
+        <img id="darkmode" src="Imagens/dark mode.jpg" alt="Modo noturno">
+        <div>
+            <img id="letra_aumenta" src="Imagens/lupa aumenta.jpg" alt="Aumenta">
+            <img id="letra_diminui" src="Imagens/lupa diminui.jpg" alt="Diminui">
+        </div>
+    </header>
+	<main>
+		<div class="titulo_page">
+			<h1  id="topo"> CORONAVÍRUS </h1>
+			<h2> Boletim Oficial </h2>
+			<h2> Plano Varginha </h2>
+		</div>
+		<section class="flex_dados">
+			<section class="box_num_obitos">
+				<img src="imagens/ambulancia.png" alt="injeção" id="img_ambulancia">
+				<h1> Número de óbitos por Coronavírus em Varginha </h1>
+				<h2> Descartados </h2>
+				<h3> 67 </h3>
+				<h2> Em investigação </h2>
+				<h3> 02 </h3>
+				<h2> Confirmados </h2>
+				<h3> 334 </h3>
+				<h5> *Dados atualizados em 20/08/2021</h5>
+			</section>
+			<section class="box_num_leitos">
+				<img src="imagens/hospital_predio.png" alt="injeção" id="img_hospital">
+				<h1>Número de leitos </h1>
+				<h3> 159 leitos UTI e 300 leitos enfermaria </h3>
+				<h2> Disponíveis na UTI </h2>
+				<h3> 87 </h3>
+				<h2> Disponíveis na Enfermaria </h2>
+				<h3> 150 </h3>
+				<h5>*Dados atualizados em 20/08/2021</h5>
+			</section>
+			<section class="box_num_vacinados">
+				<img src="imagens/vacinas.png" alt="injeção" id="img_vacinas">
+				<h1>VACINÔMETRO</h1>
+				<h2>Total de doses aplicadas</h2>
+				<h3>107.151</h3>
+				<h2> 1º Dose aplicada </h2>
+				<h3>76.148</h3>
+				<h2> 2º Dose aplicada </h2>
+				<h3>28.718</h3>
+				<h2> Dose única aplicada </h2>
+				<h3>2.285</h3>
+				<h5>*Dados atualizados em 20/08/2021</h5>
+			</section>
+		</section>
+			<section >
+				<section class="box_inputs">
+					<h1>Para verificar a fase e a abertura dos setores da economia de acordo com as fases, preencha abaixo o solicitado:</h1>
+					<h2>Primeiro, insira o percentual da ocupação de leitos na UTI</h2>
+					<label for="input_validacao_uti"> UTI</label>
+					<input type="number" name="variação_uti" max="100" min="0" id="input_validacao_uti"><span> %</span>
+					<h2>Em seguida, insira o percentual da ocupação de leitos na enfermaria</h2>
+					<label for="input_validacao_enf"> ENFERMARIA</label>
+					<input type="number" name="variação_enf"  max="100" min="0" id="input_validacao_enf"><span> %</span> <br>
+					<button id="botao_calcula_fase" disabled> Calcular </button>
+				</section>
+
+				<p id="frase_fase_atual"> A cidade está na fase <span id="span_fase"></span> e neste momento, estes são os setores que podem ser abertos: </p>
+				<section class="box_tabela_um">
+					<table class="tabela_fases_abertura">
+						<thead>
+							<tr>
+								<th>Setores Temáticos</th>
+								<th class="fase_um"> Fase 1 </th>
+								<th class="fase_dois"> Fase 2 </th>
+								<th class="fase_tres"> Fase 3 </th>
+								<th class="fase_quatro"> Fase 4 </th>
+								<th class="fase_cinco"> Fase 5 </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> <img src="imagens/setor_parque.png" alt="banco de praça" class="imagens_setores"> Espaços públicos </td>
+								<td class="fase_um setor_proibido" >&cross;</td>
+								<td class="fase_dois setor_proibido">&cross;</td>
+								<td class="fase_tres setor_proibido">&cross;</td>
+								<td class="fase_quatro setor_proibido">&cross;</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_imobiliaria.png" alt="chave" class="imagens_setores"> Atividades imobiliárias </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_tres setor_liberado">&check;</td>
+								<td class="fase_quatro setor_liberado">&check;</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_concessionária.png" alt="carro" class="imagens_setores"> Concessionárias </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_tres setor_liberado">&check;</td>
+								<td class="fase_quatro setor_liberado">&check;</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_escritorios.png" alt="predio" class="imagens_setores"> Escritórios </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_tres setor_liberado">&check;</td>
+								<td class="fase_quatro setor_liberado">&check;</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_restaurantes.jpg" alt="garfo e faca" class="imagens_setores"> Bares, restaurantes e similares </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_proibido">&cross;</td>
+								<td class="fase_tres setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_quatro setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_comercio.png" alt="carrinho de mercado" class="imagens_setores"> Comércio </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_tres setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_quatro setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_shopping.png" alt="sacola de compras" class="imagens_setores"> Shopping center </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_tres setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_quatro setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_salao_beleza.png" alt="mão passando esmalte" class="imagens_setores">Salão de beleza </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_proibido">&cross;</td>
+								<td class="fase_tres setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_quatro setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_academia.png" alt="aparelho para academia" class="imagens_setores"> Academia </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_proibido">&cross;</td>
+								<td class="fase_tres setor_proibido">&cross;</td>
+								<td class="fase_quatro setor_semi_liberado">Aberto com restrições</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_teatro.png" alt="máscaras de teatro" class="imagens_setores"> Teatro, cinemas </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_proibido">&cross;</td>
+								<td class="fase_tres setor_proibido">&cross;</td>
+								<td class="fase_quatro setor_proibido">&cross;</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_eventos.png" alt="calendário" class="imagens_setores"> Promover eventos que geram aglomeração, incl.	esportivos </td>
+								<td class="fase_um setor_proibido">&cross;</td>
+								<td class="fase_dois setor_proibido">&cross;</td>
+								<td class="fase_tres setor_proibido">&cross;</td>
+								<td class="fase_quatro setor_proibido">&cross;</td>
+								<td class="fase_cinco setor_liberado">&check;</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_educacao.png" alt="livro de escola" class="imagens_setores"> Educação </td>
+								<td class="fase_um setor_indefinido">A definir</td>
+								<td class="fase_dois setor_indefinido">A definir</td>
+								<td class="fase_tres setor_indefinido">A definir</td>
+								<td class="fase_quatro setor_indefinido">A definir</td>
+								<td class="fase_cinco setor_indefinido">A definir</td>
+							</tr>
+							<tr>
+								<td> <img src="imagens/setor_transport.png" alt="onibus e metro" class="imagens_setores"> Transporte </td>
+								<td class="fase_um setor_indefinido">A definir</td>
+								<td class="fase_dois setor_indefinido">A definir</td>
+								<td class="fase_tres setor_indefinido">A definir</td>
+								<td class="fase_quatro setor_indefinido">A definir</td>
+								<td class="fase_cinco setor_indefinido">A definir</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+			<section class="flex_fases">
+				<section class="box_tabela_dois">
+					<h1>Confira a fase atual</h1>
+					<h2>Entenda como funcionam os critérios e as fases da retomada da economia de Varginha</h2>
+					<table class="tabela_calculo_fases">
+						<thead>
+							<tr>
+								<th>Critério</th>
+								<th>Indicador</th>
+								<th>Fase 1 - Alerta Máximo</th>
+								<th>Fase 2 - Controle</th>
+								<th>Fase 3 - Flexibilização</th>
+								<th>Fase 4 - Abertura Parcial</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2">Capacidade do sistema de saúde</td>
+								<td>Taxa de Ocupação de Leitos UTI (Covid)</td>
+								<td class="fase_vermelha">Acima de 80%</td>
+								<td class="fase_laranja">Entre 70% e 80%</td>
+								<td class="fase_amarela">Entre 70% e 60%</td>
+								<td class="fase_verde">Abaixo de 60%</td>
+							</tr>
+							<tr>
+								<td>Leitos UTI (Covid) / 100k Habitantes</td>
+								<td class="fase_vermelha">Abaixo de 3,0</td>
+								<td class="fase_laranja">Entre 3,0 e 5,0</td>
+								<td class="fase_amarela">Acima de 5,0</td>
+								<td class="fase_verde">Acima de 5,0</td>
+							</tr>
+							<tr>
+								<td rowspan="3">Evolução da epidemia</td>
+								<td># de novos casos últimos 7 dias / # de novos casos 7 dias anteriores</td>
+								<td class="fase_vermelha">Acima de 2,0</td>
+								<td class="fase_laranja">Entre 1,0 e 2,0</td>
+								<td class="fase_amarela">Entre 1,0 e 2,0</td>
+								<td class="fase_verde">Abaixo de 1,0</td>
+							</tr>
+							<tr>
+								<td># de novas internações últimos 7 dias / # de novas internações 7 dias anteriores</td>
+								<td class="fase_vermelha">Acima de 1,5</td>
+								<td class="fase_laranja">Entre 1,0 e 1,5</td>
+								<td class="fase_amarela">Entre 0,5 e 1,0</td>
+								<td class="fase_verde">Abaixo de 0,5</td>
+							</tr>
+							<tr>
+								<td># de óbitos por Covid nos últimos 7 dias / # de óbitos por Covid nos 7 dias anteriores</td>
+								<td class="fase_vermelha">Acima de 2,0</td>
+								<td class="fase_laranja">Entre 1,0 e 2,0</td>
+								<td class="fase_amarela">Entre 0,5 e 1,0</td>
+								<td class="fase_verde">Abaixo de 0,5</td>
+							</tr>
+						</tbody>
+					</table>				
+				</section>
+		</section>
+		<!-- Libras -->
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
+	</main>	
+    <footer>
+        <p>&copy;Todos os direitos reservados</p>
+        <div>
+            <a href="https://api.whatsapp.com/send/?phone=553576010949&text&app_absent=0" target="_blank"><img
+                    class="img_footer" src="Imagens/Whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/prefeituradevarginha/" target="_blank"><img class="img_footer"
+                    src="Imagens/Instagram.png" alt="Instagram"></a>
+            <a href="https://m.facebook.com/prefeituravarginha/?locale2=pt_BR"><img class="img_footer"
+                    src="Imagens/facebook.png" alt="_blank"></a>
+        </div>
+        <span id="data"></span>
+        <a href="#topo"><img class="img_footer" src="Imagens/top.jpg" alt="Voltar para o top"></a>
+    </footer>
+
+    <!-- <script src="JS/Home.js"></script> -->
+</body>
+
+</html>

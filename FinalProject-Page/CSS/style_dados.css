@@ -1,0 +1,347 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo_page{
+	background-image: url(../imagens/capa.jpg);
+	background-size: cover;
+	height: 30%;
+	color: white;
+	text-shadow: 3px 3px rgb(5, 1, 34);	
+	font-size: clamp(1rem, 2vw, 2rem);
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+
+}
+
+.flex_dados{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.box_inputs{
+	text-align: center;
+	padding-top: 10px;
+	line-height: 1.3;
+}
+
+.box_inputs h1, .box_tabela_dois h1{
+	color: #e60202;
+	font-size: clamp(1rem, 2vw, 2rem);
+}
+.box_inputs h2, .box_tabela_dois h2{
+	color: #060d7a;
+	font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.box_num_obitos{
+	width: 28%;
+	height: 50%;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 10px;
+	line-height: 1.3;
+}
+.box_num_obitos h1{
+	color: #2372D9;
+	font-size: clamp(1rem, 1.7vw, 2rem);
+}
+
+.box_num_leitos{
+	width: 28%;
+	height: 50%;
+	border-radius: 25px;
+	text-align: center;
+	padding-top: 5px;
+	line-height: 1.3;
+
+}
+.box_num_leitos h1{
+	color: #2372D9;
+	font-size: clamp(1rem, 1.7vw, 2rem);
+}
+
+.box_num_vacinados{
+	width: 28%;
+	height: 50%;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 1.3;
+}
+
+.box_num_vacinados h1{
+	color: #2372D9;
+	font-size: clamp(1rem, 1.7vw, 2rem);
+}
+.box_num_vacinados h2, .box_num_obitos h2, .box_num_leitos h2{
+	color: rgb(196, 28, 28);
+	font-size: clamp(1rem, 1.4vw, 2rem);
+}
+.box_num_vacinados h5, .box_num_obitos h5, .box_num_leitos h5{
+	color: rgb(2, 5, 49);
+	font-size: clamp(1rem, 0.7vw, 2rem)
+}
+.box_num_vacinados h3, .box_num_obitos h3, .box_num_leitos h3{
+	color: rgb(2, 5, 49);
+	font-size: clamp(1rem, 1.2vw, 2rem)
+}
+#img_ambulancia{
+	width: 60%;
+	height: 25%;
+}
+#img_vacinas{
+	width: 100%;
+	height: 25%;
+}
+
+#img_hospital{
+	width: 80%;
+	height: 40%;
+}
+
+#input_validacao_uti{
+	border: #0E2F59 solid 1px;
+}
+#input_validacao_enf{
+	border: #0E2F59 solid 1px;
+}
+#botao_calcula_fase{
+	background-color: #0E2F59;
+	color: white;
+	border-radius: 5px;
+	width: 8%;
+	height: 3.5vh;
+	margin-top: 10px;
+	font-weight: 700;
+}
+#frase_fase_atual{
+	color: rgb(0, 8, 119);
+	font-size: clamp(1rem, 2.0vw, 2rem);
+	margin-top: 20px;
+	text-align: center;
+}
+
+.box_tabela_dois{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.tabela_calculo_fases{
+	border: 4px solid #102b4e;
+	border-radius: 5px;
+	width: 95%;
+	height: 50vh;
+}
+
+.tabela_calculo_fases td, th, tr {
+	border: 2px solid #102b4e;
+	text-align: center;
+	padding: 2px;
+}
+
+.tabela_calculo_fases th:nth-child(3), .tabela_fases_abertura th:nth-child(2){
+	background-color: rgb(158, 0, 0);
+	color: white;
+}
+.tabela_calculo_fases th:nth-child(4), .tabela_fases_abertura th:nth-child(3){
+	background-color: rgb(179, 97, 3);
+	color: white;
+}
+.tabela_calculo_fases th:nth-child(5), .tabela_fases_abertura th:nth-child(4){
+	background-color: rgb(170, 167, 0);
+	color: white;
+}
+.tabela_calculo_fases th:nth-child(6), .tabela_fases_abertura th:nth-child(5){
+	background-color: rgb(30, 107, 0);
+	color: white;
+}
+.tabela_fases_abertura th:nth-child(6){
+	background-color: rgb(2, 0, 107);
+	color: white;
+}
+
+.box_tabela_um{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.tabela_fases_abertura{
+	border: 4px solid #102b4e;
+	border-radius: 5px;
+	width: 75%;
+	height: 50vh;
+}
+
+.tabela_fases_abertura td, th, tr {
+	text-align: center;
+	padding: 2px;
+	border:none;
+}
+
+.imagens_setores {
+	width: 1.3vw;
+	height: 2vh;
+}
+
+.fase_vermelha{
+	background-color: rgb(231, 151, 145);
+}
+
+.fase_laranja{
+	background-color: rgb(231, 179, 130);
+}
+
+.fase_amarela{
+	background-color: rgb(224, 219, 142);
+}
+
+.fase_verde{
+	background-color: rgb(172, 233, 144);
+}
+.setor_proibido{
+	background-color: rgb(247, 166, 160);
+}
+.setor_semi_liberado{
+	background-color: rgb(235, 235, 169);
+}
+.setor_liberado{
+	background-color: rgb(186, 236, 86);
+}
+.setor_indefinido{
+	background-color: rgb(190, 190, 190);
+}
+/* Configuração de header e  footer */
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Conteiner do cabeçalho */
+header{
+    width: 100%;
+    height: 18vh;
+    background-image: linear-gradient(#0E2F59, #416BBF);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+	top: 0;
+    box-shadow: 0 5px 10px #416BBF;
+}
+#logo{
+    height: 16vh;
+}
+/* Estilização do menu */
+nav{
+    height: 15%;
+    text-transform: uppercase;
+}
+.menu {
+    list-style: none;
+    float: left;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    border-right: 1px solid #F2F2F2;
+}
+.menu li a {
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    font-size: 120%;
+    font-weight: bold;
+}
+.menu li a:hover {
+    background: #0E2F59;
+    text-shadow: 0px 0px 5px #F2F2F2;
+}
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+}
+.menu li:hover ul{
+    display: block;
+    background-image: linear-gradient(#0E2F59, #416BBF);
+}
+.menu li ul li {
+    display: block;
+    width: 100%;
+}
+/* Ajustes do formulário */
+form{
+    width: 14vw;
+}
+form input{
+    width: 7vw;
+    font-size: 100%;
+    border-radius: 5%;
+}
+form button{
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 100%;
+    color: #0E2F59;
+    border-radius: 5%;
+}
+#darkmode, #letra_aumenta, #letra_diminui{
+    height: 4vh;
+}
+/* Estilização do rodapé */
+footer{
+    width: 100%;
+    height: 12vh;
+    background-image: linear-gradient( #416BBF,#0E2F59);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #F2F2F2;
+    font-size: 120%;
+    box-shadow: 0 -5px 10px #416BBF;
+}
+.img_footer{
+    height: 5vh;
+}
+
+#banner{
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0 5px 10px #416BBF;
+}
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.img_main{
+    width: 35%;
+    box-shadow: 0 5px 10px #0E2F59;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
